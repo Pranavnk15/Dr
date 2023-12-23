@@ -1,0 +1,61 @@
+/* Hamburger menu styles */
+.hamburger-menu {
+    display: none; /* Initially hide for larger screens */
+    cursor: pointer;
+  }
+  
+  .navbar-icon {
+    margin-right: 10px;
+  }
+  
+  /* Adjusted styles for nav items */
+  .navbar-nav .nav-item .nav-link {
+    font-size: 20px; /* Increased font size */
+    position: relative;
+    transition: color 1.0s ease; /* Smooth color transition */
+    text-decoration: none; /* Remove default underline */
+    margin-right: 50px;
+  }
+  
+  /* Underline effect on hover */
+  .navbar-nav .nav-item .nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: black;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    transition: width 1.0s ease; /* Animation properties */
+  }
+  
+  /* Expand underline effect on hover */
+  .navbar-nav .nav-item .nav-link:hover::after {
+    width: 100%;
+    transition: width 0.3s ease; /* Animation properties */
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    /* Your existing media query styles */
+    .navbar-middle {
+      display: none;
+    }
+    .navbar-right {
+      display: none;
+    }
+    .hamburger-menu {
+      display: block;
+    }
+    .hamburger-menu.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger-menu.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger-menu.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+  

@@ -1,0 +1,82 @@
+
+.head1{
+  margin-top: 200px;
+  margin-left: 300px;
+}
+.head2{
+  margin-left: 150px;
+  margin-bottom: 200px;
+}
+.intro3{
+  margin-left: 800px;
+  margin-right: 100px;
+}
+.intro4{
+  margin-left: 800px;
+  margin-right: 100px;
+  margin-bottom: 200px;
+}
+.card{
+  margin-bottom: 30px;
+
+}
+.head3{
+  margin-left: 250px;
+}
+.treatments{
+  margin-bottom: 50px;
+}
+.testimonials1{
+  z-index: -1;
+  margin-left: 630px;
+}
+#testimonials{
+text-align: center;
+z-index: -2;
+margin-top: 70px;
+margin-bottom: 100px;
+color: black;
+}
+
+#features{
+  padding: 7% 15%;
+  background-color: white;
+  position: absolute;
+  z-index: 1;
+}
+#press{
+  background-color: #ff4c68;
+  padding-bottom: 3%;
+  text-align: center;
+}
+#pricing{
+  padding: 100px;
+  text-align: center;
+}
+#cta{
+  padding: 70px;
+}
+.testimonial-img{
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+.testimonial-text{
+  font-size: 2rem;
+  line-height: 1.5;
+}
+.press-logo{
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+.carousel-item{
+  padding: 2% 7%;
+}
+
+.row{
+  padding: 3% 2%;
+}
+.treat{
+  margin-left: 630px;
+}
+

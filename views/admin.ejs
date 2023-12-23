@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Portal</title>
+</head>
+<body>
+    <h2>User Information</h2>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Comments</th>
+        </tr>
+        <% users.forEach(user => { %>
+            <tr>
+                <td><%= user.name %></td>
+                <td><%= user.email %></td>
+                <td><%= user.phone %></td>
+                <td><%= user.comments %></td>
+            </tr>
+        <% }); %>
+    </table>
+    <a href="/compose" method="get"> Blog Compose</a>
+
+</body>
+</html>

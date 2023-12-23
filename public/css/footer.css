@@ -1,0 +1,37 @@
+footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer li a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+
+footer li a:hover {
+    text-decoration: none;
+}
+
+footer li a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+    transition: width 0.3s ease; /* Transition for underline */
+}
+
+footer li a:hover::after {
+    width: 100%;
+}
