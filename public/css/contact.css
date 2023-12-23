@@ -1,0 +1,88 @@
+.contact-section {
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  
+  .contact-info {
+    font-size: 1.5rem;
+    width: 45%;
+    margin: auto;
+    padding: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+  }
+  
+  .contact-info img {
+    width: 20px;
+    margin-right: 10px;
+  }
+  
+  .contact-info h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-form {
+    width: 40%;
+    margin: auto;
+    padding: 30px;
+    background-color: #b3e5fc; /* Light blue container */
+    border-radius: 10px;
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form label,
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    font-size: large;
+    margin-bottom: 0px;
+  } 
+  
+   .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form input[type="tel"],
+  .contact-form textarea {
+    padding: 5px;
+  }
+  
+  .contact-form button {
+    padding: 5px 10px; /* Padding for the Contact us button */
+    background-color: #ffc107; /* Yellow color */
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #ffca28;
+  }
+  
+  .location {
+    margin-top: 50px;
+    display: flex;
+    color: blueviolet;
+    flex-direction: column;
+  }
+  
+  .location .location-info {
+    text-align: center;
+    font-size: 3rem; /* Large font size */
+    color: black; /* Blueviolet color */
+    margin-bottom: 50px;
+  }
+  
+  .location .map {
+    width: 100%;
+    height: 400px; /* Set a fixed height */
+  }
+  
+ 

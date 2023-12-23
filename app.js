@@ -1,4 +1,5 @@
 const express = require('express');
+const session = require('express-session');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const _ = require("lodash");
@@ -9,6 +10,12 @@ const homeStartingContent = "Lacus vel facilisis volutpat est velit egestas dui 
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
 app.set('views', './views');
+// Set up session middleware
+app.use(session({
+    secret: 'mySecret', // Change this to a secure value in production
+    resave: false,
+    saveUninitialized: false
+  }));
 
 // Body parser middleware
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -69,7 +76,7 @@ app.post('/submit', async (req, res) => {
 
 // Admin portal to view data
 app.get('/admin', (req, res) => {
-    User.find({}).exec()
+    User.find({}).sort({ _id: -1 }).exec()
         .then(users => {
             res.render('admin', { users: users }); // Assuming 'admin.ejs' is your EJS file for the admin view
         })
@@ -79,6 +86,29 @@ app.get('/admin', (req, res) => {
         });
 });
 
+// Delete route for individual user
+app.get('/delete/:id', async (req, res) => {
+    const userId = req.params.id;
+    try {
+        await User.findByIdAndRemove(userId);
+        res.redirect('/admin');
+    } catch (err) {
+        console.error('Error deleting user from MongoDB: ' + err.message);
+        res.status(500).send('Error deleting user');
+    }
+});
+
+// Delete route for multiple users
+app.post('/delete', async (req, res) => {
+    const userIds = req.body.deleteUser;
+    try {
+        await User.deleteMany({ _id: { $in: userIds } });
+        res.redirect('/admin');
+    } catch (err) {
+        console.error('Error deleting users from MongoDB: ' + err.message);
+        res.status(500).send('Error deleting users');
+    }
+});
 app.get("/blog", async function(req, res) {
     try {
         const posts = await Post.find({}).exec();
@@ -100,7 +130,7 @@ app.get("/blog", async function(req, res) {
 
     try {
         await post.save();
-        res.redirect("/");
+        res.redirect("/blog");
     } catch (err) {
         console.error('Error saving post to MongoDB: ' + err.message);
         res.status(500).send('Error composing post');
@@ -110,6 +140,14 @@ app.get("/blog", async function(req, res) {
 
 app.get("/compose", function(req, res){
     res.render("compose");
+});
+
+app.get("/contact", function(req, res){
+    res.render("contactus");
+});
+
+app.get("/services", function(req, res){
+    res.render("services");
 });
 
 app.get("/posts/:postId", async function(req, res) {
@@ -131,6 +169,29 @@ app.get("/posts/:postId", async function(req, res) {
         res.status(500).send('Error retrieving post');
     }
 });
+// Sample route for handling login form submission
+app.post('/login', (req, res) => {
+    const { email, password } = req.body;
+  
+    // Here, you can perform authentication logic, like checking against a database
+    // For demonstration purposes, a simple check is shown
+  
+    if (email === 'admin@gmail.com' && password === '1234') {
+      // Set user session (create a basic authenticated session)
+      req.session.authenticated = true;
+      req.session.user = { email: email }; // Store user details in the session
+      res.redirect('/admin'); // Redirect to admin or authenticated page
+    } else {
+      res.send('Invalid credentials. Please try again.'); // For demonstration purposes, send an error message
+    }
+  });
+  
+
+// Sample route for displaying the login form
+app.get('/login', (req, res) => {
+    res.render('login'); // Render the login.ejs file
+  });
+  
   
 const PORT = 3000;
 app.listen(PORT, () => {

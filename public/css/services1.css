@@ -1,113 +1,37 @@
-.head{
-  margin-left: 630px;
+.head {
+  text-align: center;
   margin-top: 100px;
 }
 
-.para1{
+.para1 {
   margin-top: 50px;
-  padding-left: 200px;
-  padding-right: 200px;
+  padding: 0 200px;
 }
 
-.img1{
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+}
+
+.img {
   height: 400px;
   width: 400px;
+}
+
+.text {
+  flex: 1;
   margin-left: 50px;
+}
+
+.head1,
+.head2,
+.head3,
+.head4,
+.head5 {
   margin-top: 50px;
-  position: absolute;
+  text-align: center;
+  color: black;
 }
 
-.head1{
-  margin-left: 50px;
-  margin-top: 100px;
-
-}
-
-.para2{
-  margin-left: 500px;
-  margin-bottom: 250px;
-  margin-top: 200px;
- position: relative;
-}
-
-.head2{
-  margin-left: 50px;
-  margin-bottom: 70px;
-}
-
-.img2{
-  height: 400px;
-  width: 400px;
-  margin-left: 50px;
-position: absolute;
-}
-
-.para3{
-position: relative;
-margin-left: 500px;
-margin-top: 200px;
-}
-
-.head3{
-  margin-top: 275px;
-  margin-left: 50px;
-  margin-bottom: 70px;
-}
-
-.img3{
-  height: 400px;
-  width: 400px;
-  margin-left: 50px;
-  position: absolute;
-}
-
-.para4{
-  position: relative;
-  margin-left: 500px;
-  margin-top: 180px;
-}
-
-.para5{
-  position: relative;
-  margin-left: 500px;
-  margin-top: 20px;
-}
-
-.head4{
-  margin-top: 225px;
-  margin-left: 50px;
-  margin-bottom: 70px;
-}
-
-.img4{
-  height: 400px;
-  width: 400px;
-  margin-left: 50px;
-  position: absolute;
-}
-
-.para6{
-  position: relative;
-  margin-left: 500px;
-  margin-top: 220px;
-}
-
-.head5{
-  margin-top: 225px;
-  margin-left: 50px;
-  margin-top:270px;
-  margin-bottom: 70px;
-}
-
-.img5{
-  height: 400px;
-  width: 400px;
-  margin-left: 50px;
-  position: absolute;
-}
-
-.para7{
-  margin-left: 500px;
-  margin-top: 220px;
-  position: relative;
-}

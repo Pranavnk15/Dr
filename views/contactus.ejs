@@ -1,0 +1,48 @@
+<%- include("partials/mainHeader"); -%>
+
+<div class="contact-section">
+  <div class="contact-info">
+    
+      <h1> Schedule Your Visit</h1> 
+      You can't pick your family, but you can pick your<br/>
+      Smartest Dentist in town <br/>
+      <br>
+      <br>
+      <img src="images/placeholder.png" alt="">Kamla Corner, Chinchwad - 411033 <br/>
+      <img src="images/phone-call.png" alt="">Phone: 910-762-0786 <br/>
+      <img src="images/mail-1.png" alt="">Email: info@hoggardfamilydentistry.com <br/>
+  </div>
+    
+  
+    <div class="contact-form">
+      <form action="/submit" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+        
+        <label for="comments">Comments:</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+        <button type="submit" value="Submit"> Contact us</button>
+        
+      </form>
+    </div>
+  </div>
+  
+
+  <div class="location">
+    <div class="location-info">
+      <h3>Visit Us at SmileLine Dental Clinic</h3>
+      <p>Get Directions to our Clinic</p>
+      </div>
+      <div class="map" <!-- Google Map embed code here -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15123.250052658886!2d73.76290568715822!3d18.627500800000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b857cadcb92d%3A0x7f5fe6672fe29f3e!2sSmile%20Line!5e0!3m2!1sen!2sin!4v1703340439810!5m2!1sen!2sin" width="1518" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+  </div>
+</div>
+
+<%- include("partials/mainFooter"); -%>

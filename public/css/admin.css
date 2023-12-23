@@ -1,0 +1,62 @@
+
+/* Style for User Information table */
+
+.admin {
+    text-align: center;
+}
+.user-info {
+    text-align: center;
+    margin: 5%;
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 60vh; /* Set a maximum height for scrollable area */
+}
+.delete-button {
+    margin-top: 1%;
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+.delete-button:hover {
+    background-color: #d9534f;
+}
+  
+  
+.main-content {
+    flex: 1;
+    padding-bottom: 60px;
+}
+.cl-name{
+    text-align: center;
+}
+.bg {
+    text-align: center;
+    font-size: 1.5rem;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+  }
+  
+  /* Style for alternate row colors */
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  

@@ -1,28 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Admin Portal</title>
-</head>
-<body>
-    <h2>User Information</h2>
-    <table border="1">
-        <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Comments</th>
-        </tr>
-        <% users.forEach(user => { %>
-            <tr>
-                <td><%= user.name %></td>
-                <td><%= user.email %></td>
-                <td><%= user.phone %></td>
-                <td><%= user.comments %></td>
-            </tr>
-        <% }); %>
-    </table>
-    <a href="/compose" method="get"> Blog Compose</a>
+<%- include("partials/mainHeader"); -%>
 
-</body>
-</html>
+<div class="main-content">
+    <hr>
+    <h1 class="admin">Admin Portal</h1>
+    <hr>
+    <div class="bg">
+        Compose a Blog
+        <a href="/compose" method="get">Click Here to Compose Section</a>
+    </div>
+    <hr>
+    <div class="user-info">
+        <h2>New Inquiries</h2>
+        <form action="/delete" method="post"> <!-- Form for deletion -->
+            <table border="1">
+                <tr>
+                    <th></th>
+                    <th class="cl-name">Name</th>
+                    <th class="cl-name">Email</th>
+                    <th class="cl-name">Phone</th>
+                    <th class="cl-name">Comments</th>
+                    <th>Delete</th>
+                </tr>
+                <% users.forEach(user => { %>
+                    <tr>
+                        <td><input type="checkbox" name="deleteUser" value="<%= user._id %>"></td>
+                        <td><%= user.name %></td>
+                        <td><%= user.email %></td>
+                        <td><%= user.phone %></td>
+                        <td><%= user.comments %></td>
+                        <td><a href="/delete/<%= user._id %>">Delete</a></td>
+                    </tr>
+                <% }); %>
+            </table>
+            <button type="submit" class="delete-button">Delete Selected</button>
+        </form>
+    </div>
+</div>
+
+<%- include("partials/mainFooter"); -%>
