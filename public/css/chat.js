@@ -75,7 +75,7 @@ const renderMessageEle = (txt, type) => {
 const getChatbotResponse = (userInput) => {
   userInput = userInput.toLowerCase().trim();
   
-  if (userInput.includes('hello')) {
+  if (userInput.includes('hello') || userInput.includes('hi')) {
     return "Hello! How can I assist you today?";
   } else if (userInput.includes('appointment')) {
     return "Sure, let's schedule an appointment for you. Fill out the contact us form.";
