@@ -1,11 +1,29 @@
+/* Add your existing navbar styles */
 
+/* Hamburger menu styles */
+.hamburger-menu {
+  display: none; /* Initially hide for larger screens */
+  cursor: pointer;
+}
+.navbar-icon{
+  margin-right: 10px;
+}
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: 0.4s;
+}
 .head1{
   margin-top: 200px;
-  margin-left: 300px;
+  margin-left: 20px;
+  color: white;
 }
 .head2{
-  margin-left: 150px;
-  margin-bottom: 200px;
+  margin-left: 20px;
+  margin-bottom: 500px;
+  color: white;
 }
 .intro3{
   margin-left: 800px;
@@ -15,6 +33,40 @@
   margin-left: 800px;
   margin-right: 100px;
   margin-bottom: 200px;
+  margin-top: 50px;
+}
+.nav-item{
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.navbar-brand{
+  margin-left: 20px;
+}
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .navbar-middle {
+    display: none; /* Hide the middle links for smaller screens */
+  }
+
+  .navbar-right {
+    display: none; /* Hide the right icons for smaller screens */
+  }
+
+  .hamburger-menu {
+    display: block; /* Show the hamburger menu for smaller screens */
+  }
+
+  .hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }
 .card{
   margin-bottom: 30px;
@@ -27,12 +79,10 @@
   margin-bottom: 50px;
 }
 .testimonials1{
-  z-index: -1;
   margin-left: 630px;
 }
 #testimonials{
 text-align: center;
-z-index: -2;
 margin-top: 70px;
 margin-bottom: 100px;
 color: black;
@@ -108,3 +158,4 @@ position: absolute;
   
 
 }
+
