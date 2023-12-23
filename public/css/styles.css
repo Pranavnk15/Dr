@@ -80,3 +80,19 @@ color: black;
   margin-left: 630px;
 }
 
+.head4{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+  height:600px;
+  margin-top: 100px;
+  width: 1470px;
+}
+.doctor4{
+position: absolute;
+  width:700px;
+  height: 500px;
+  margin-left: 60px;
+
+}
