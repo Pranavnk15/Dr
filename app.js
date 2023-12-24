@@ -150,6 +150,11 @@ app.get("/services", function(req, res){
     res.render("services");
 });
 
+app.get("/aboutus", function(req, res){
+    res.render("about");
+});
+
+
 app.get("/posts/:postId", async function(req, res) {
     try {
         const requestedPostId = req.params.postId;

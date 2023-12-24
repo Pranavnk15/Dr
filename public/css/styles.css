@@ -68,67 +68,6 @@
     transform: translateY(-8px) rotate(-45deg);
   }
 }
-.card{
-  margin-bottom: 30px;
-
-}
-.head3{
-  margin-left: 250px;
-}
-.treatments{
-  margin-bottom: 50px;
-}
-.testimonials1{
-  margin-left: 630px;
-}
-#testimonials{
-text-align: center;
-margin-top: 70px;
-margin-bottom: 100px;
-color: black;
-}
-
-#features{
-  padding: 7% 15%;
-  background-color: white;
-  position: absolute;
-  z-index: 1;
-}
-#press{
-  background-color: #ff4c68;
-  padding-bottom: 3%;
-  text-align: center;
-}
-#pricing{
-  padding: 100px;
-  text-align: center;
-}
-#cta{
-  padding: 70px;
-}
-.testimonial-img{
-  width: 10%;
-  border-radius: 100%;
-  margin: 20px;
-}
-.testimonial-text{
-  font-size: 2rem;
-  line-height: 1.5;
-}
-.press-logo{
-  width: 15%;
-  margin: 20px 20px 50px;
-}
-.carousel-item{
-  padding: 2% 7%;
-}
-
-.row{
-  padding: 3% 2%;
-}
-.treat{
-  margin-left: 630px;
-}
 
 
 .jumbotron {
@@ -143,19 +82,174 @@ color: black;
     color: white;
 }
 
-.intro2 {
-  margin: 10px;
-  padding: 10px;
+
+
+.hero-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px  ;
+  font-size: medium;
+  font-family: sans-serif;
 }
 
+.hero-txt {
+  flex: 0 0 50%;
+  padding-right: 50px;
+  padding-left: 50px;
+}
 
+.hero-title span {
+  border-bottom: 2px solid yellow;
+}
 
-.doctor4{
-position: absolute;
-  width:700px;
-  height: 500px;
-  margin-left: 60px;
+.hero-title p {
+  color: black;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin-top: 10px;
+}
+
+.hori {
+  width: 30%;
+  border-color: blue;
+  border-width: 2px;
+  margin: 20px 0;
+}
+
+.hero-img {
+  flex: 0 0 50%;
+}
+
+.hero-img img {
+  max-width: 100%;
+  height: auto;
   
-
 }
 
+
+.hero-3 {
+  z-index: -1;
+  text-align: center;
+  padding: 50px 0;
+  font-family: sans-serif;
+}
+
+.hero3-main-title {
+  margin-bottom: 30px;
+}
+
+.hero3-main-title h1 {
+  font-size: 2rem;
+}
+
+.hero3-main-title span {
+  border-bottom: 2px solid yellow;
+}
+
+.hero-3 hr {
+  width: 20%;
+  border-color: blue;
+  border-width: 2px;
+  margin: 20px auto;
+}
+
+.cards-container {
+  z-index: -2;
+  padding: 50px ;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust the gap between cards */
+}
+
+.card {
+  flex: 0 0 calc(30% - 20px); /* Adjust the card width and spacing */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.hero3-img img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.hero3-title h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+/* Testimonial Container */
+.testimonial-container {
+  max-width: 1200px; /* Adjust container max-width */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 50px; /* Add padding as needed */
+}
+
+/* Testimonial Carousel Content */
+.test-title {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 20px;
+}
+
+.testimonial-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Testimonial Background Image */
+.testimonial-bg {
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  padding: 100px 0; /* Adjust padding as needed */
+  filter: grayscale(80%); /* Apply grayscale effect */
+}
+
+.carousel-inner {
+  color: black; /* Testimonial text color */
+  text-align: center;
+  padding: 20px;
+  word-wrap: break-word; /* Enable word wrap for testimonial text */
+}
+
+.carousel-indicators {
+  bottom: 20px; /* Adjust indicator position */
+}
+
+.carousel-control-prev, .carousel-control-next {
+  top: 50%; /* Adjust control position */
+  transform: translateY(-50%);
+  background-color: rgba(227, 220, 220, 0.5); /* Control background color */
+  border-radius: 50px; /* Control border radius */
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  color: #fff; /* Control icon color */
+}
+
+/* Testimonial Text */
+.testimonial-text {
+  text-align: center;
+  font-size: 1.5rem; /* Adjust font size */
+  line-height: 1.5;
+}
+
+/* Testimonial Author */
+.testimonial-text em {
+  font-style: italic;
+}
