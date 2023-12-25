@@ -10,11 +10,11 @@
   
   /* Adjusted styles for nav items */
   .navbar-nav .nav-item .nav-link {
-    font-size: 20px; /* Increased font size */
+    font-size: 18px; /* Increased font size */
     position: relative;
     transition: color 1.0s ease; /* Smooth color transition */
     text-decoration: none; /* Remove default underline */
-    margin-right: 50px;
+    margin-right: 20px;
   }
   
   /* Underline effect on hover */
@@ -59,3 +59,30 @@
     }
   }
   
+  /* Media query for smaller screens */
+@media (max-width: 768px) {
+  .navbar-nav .nav-item .nav-link {
+    font-size: 16px; /* Further decreased font size for extra small screens */
+    margin-right: 10px; /* Further reduced margin for extra small screens */
+  }
+
+  /* Your existing media query styles for smaller screens */
+  .navbar-middle {
+    display: none;
+  }
+  .navbar-right {
+    display: none;
+  }
+  .hamburger-menu {
+    display: block;
+  }
+  .hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}

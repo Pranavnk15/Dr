@@ -57,4 +57,31 @@
       max-width: 300px;
     }
   }
-  
+  /* Media query for smaller screens */
+@media (max-width: 768px) {
+  .login-div {
+    height: auto; /* Adjust height for smaller screens */
+    padding: 20px; /* Add padding for smaller screens */
+  }
+
+  .login-h1 {
+    margin-top: 10px; /* Adjust top margin for smaller screens */
+    margin-bottom: 5px; /* Adjust bottom margin for smaller screens */
+  }
+
+  .login-div form {
+    max-width: 90%; /* Adjust max-width for smaller screens */
+  }
+
+  .login-div input[type="email"],
+  .login-div input[type="password"] {
+    width: 100%; /* Full width for input fields on smaller screens */
+    margin-bottom: 10px; /* Adjust margin bottom for input fields */
+  }
+
+  .login-div button {
+    width: 100%; /* Full width for the button on smaller screens */
+    padding: 8px; /* Adjust padding for the button */
+    font-size: 0.9rem; /* Adjust font size for the button */
+  }
+}

@@ -1,6 +1,8 @@
 
 /* Style for User Information table */
-
+html {
+  scroll-behavior: smooth;
+}
 .admin {
     text-align: center;
 }
@@ -60,3 +62,29 @@ table {
     background-color: #f9f9f9;
   }
   
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .user-info {
+    margin: 3%; /* Adjust margin for smaller screens */
+    max-height: 50vh; /* Adjust max height for smaller screens */
+  }
+
+  .delete-button {
+    margin-top: 2%; /* Adjust top margin for smaller screens */
+    padding: 8px 16px; /* Adjust padding for the delete button */
+  }
+
+  .bg {
+    font-size: 1.2rem; /* Adjust font size for better readability */
+  }
+
+  table {
+    margin-top: 10px; /* Adjust margin for smaller screens */
+  }
+
+  th,
+  td {
+    padding: 6px; /* Adjust padding for table cells */
+    font-size: 0.9rem; /* Adjust font size for better readability */
+  }
+}

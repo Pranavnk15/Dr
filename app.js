@@ -10,13 +10,18 @@ const homeStartingContent = "Lacus vel facilisis volutpat est velit egestas dui 
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
 app.set('views', './views');
+
 // Set up session middleware
 app.use(session({
     secret: 'mySecret', // Change this to a secure value in production
     resave: false,
-    saveUninitialized: false
-  }));
-
+    saveUninitialized: false,
+    cookie: {
+      secure: false, // Set to true in production if using HTTPS
+      maxAge: 24 * 60 * 60 * 1000 // Session max age in milliseconds (e.g., 1 day)
+    }
+}));
+  
 // Body parser middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -50,8 +55,7 @@ const Post = mongoose.model("Post", postSchema);
 // Serve HTML for the form
 app.get('/', (req, res) => {
     res.render('index');
-});
-// Handle form submission
+});// Handle form submission
 app.post('/submit', async (req, res) => {
     const { name, email, phone, comments } = req.body;
 
@@ -67,30 +71,48 @@ app.post('/submit', async (req, res) => {
         // Save user to the database
         await newUser.save();
         console.log('User saved to MongoDB');
-        res.send('Form submitted successfully!');
+        // Send an alert script for successful submission
+        res.send(`
+            <script>
+                alert('Form submitted successfully!');
+                window.location.href = '/'; // Redirect to home or another page
+            </script>
+        `);
     } catch (err) {
         console.error('Error saving user to MongoDB: ' + err.message);
-        res.status(500).send('Error submitting form');
+        // Send an alert script for form submission error
+        res.status(500).send(`
+            <script>
+                alert('Error submitting form');
+                window.location.href = '/'; // Redirect to home or another page
+            </script>
+        `);
     }
 });
 
+
 // Admin portal to view data
 app.get('/admin', (req, res) => {
-    User.find({}).sort({ _id: -1 }).exec()
+    if (req.session.authenticated) {
+        User.find({}).sort({ _id: -1 }).exec()
         .then(users => {
             res.render('admin', { users: users }); // Assuming 'admin.ejs' is your EJS file for the admin view
         })
         .catch(err => {
             console.error('Error fetching users from MongoDB: ' + err.message);
             res.status(500).send('Error retrieving data');
-        });
+    });
+    } else {
+        res.redirect('/login');
+    }
+   
 });
 
 // Delete route for individual user
 app.get('/delete/:id', async (req, res) => {
     const userId = req.params.id;
     try {
-        await User.findByIdAndRemove(userId);
+        await User.findByIdAndDelete(userId);
         res.redirect('/admin');
     } catch (err) {
         console.error('Error deleting user from MongoDB: ' + err.message);
@@ -177,7 +199,6 @@ app.get("/posts/:postId", async function(req, res) {
 // Sample route for handling login form submission
 app.post('/login', (req, res) => {
     const { email, password } = req.body;
-  
     // Here, you can perform authentication logic, like checking against a database
     // For demonstration purposes, a simple check is shown
   

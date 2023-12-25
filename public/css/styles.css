@@ -1,13 +1,19 @@
 /* Add your existing navbar styles */
+html {
+  scroll-behavior: smooth;
+}
 
 /* Hamburger menu styles */
 .hamburger-menu {
-  display: none; /* Initially hide for larger screens */
+  display: none;
+  /* Initially hide for larger screens */
   cursor: pointer;
 }
-.navbar-icon{
+
+.navbar-icon {
   margin-right: 10px;
 }
+
 .bar {
   width: 25px;
   height: 3px;
@@ -15,45 +21,55 @@
   margin: 5px 0;
   transition: 0.4s;
 }
-.head1{
+
+.head1 {
   margin-top: 200px;
   margin-left: 20px;
   color: white;
 }
-.head2{
+
+.head2 {
   margin-left: 20px;
   margin-bottom: 500px;
   color: white;
 }
-.intro3{
+
+.intro3 {
   margin-left: 800px;
   margin-right: 100px;
 }
-.intro4{
+
+.intro4 {
   margin-left: 800px;
   margin-right: 100px;
   margin-bottom: 200px;
   margin-top: 50px;
 }
-.nav-item{
+
+.nav-item {
   margin-left: 50px;
   margin-right: 50px;
 }
-.navbar-brand{
+
+.navbar-brand {
   margin-left: 20px;
 }
+
 /* Media query for smaller screens */
 @media (max-width: 768px) {
   .navbar-middle {
-    display: none; /* Hide the middle links for smaller screens */
+    display: none;
+    /* Hide the middle links for smaller screens */
   }
 
   .navbar-right {
-    display: none; /* Hide the right icons for smaller screens */
+    display: none;
+    /* Hide the right icons for smaller screens */
   }
 
   .hamburger-menu {
-    display: block; /* Show the hamburger menu for smaller screens */
+    display: block;
+    /* Show the hamburger menu for smaller screens */
   }
 
   .hamburger-menu.active .bar:nth-child(1) {
@@ -76,10 +92,10 @@
 
   align-items: left;
   height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: white;
 }
 
 
@@ -88,7 +104,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px  ;
+  padding: 50px;
   font-size: medium;
   font-family: sans-serif;
 }
@@ -124,12 +140,12 @@
 .hero-img img {
   max-width: 100%;
   height: auto;
-  
+
 }
 
 
 .hero-3 {
-  z-index: -1;
+  z-index: -10;
   text-align: center;
   padding: 50px 0;
   font-family: sans-serif;
@@ -155,16 +171,18 @@
 }
 
 .cards-container {
-  z-index: -2;
-  padding: 50px ;
+  z-index: -20;
+  padding: 50px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 20px; /* Adjust the gap between cards */
+  gap: 20px;
+  /* Adjust the gap between cards */
 }
 
 .card {
-  flex: 0 0 calc(30% - 20px); /* Adjust the card width and spacing */
+  flex: 0 0 calc(30% - 20px);
+  /* Adjust the card width and spacing */
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 20px;
@@ -194,9 +212,12 @@
 
 /* Testimonial Container */
 .testimonial-container {
-  max-width: 1200px; /* Adjust container max-width */
-  margin: 0 auto; /* Center the container horizontally */
-  padding: 50px; /* Add padding as needed */
+  max-width: 1200px;
+  /* Adjust container max-width */
+  margin: 0 auto;
+  /* Center the container horizontally */
+  padding: 50px;
+  /* Add padding as needed */
 }
 
 /* Testimonial Carousel Content */
@@ -216,36 +237,48 @@
   position: relative;
   background-size: cover;
   background-position: center center;
-  padding: 100px 0; /* Adjust padding as needed */
-  filter: grayscale(80%); /* Apply grayscale effect */
+  padding: 100px 0;
+  /* Adjust padding as needed */
+  filter: grayscale(80%);
+  /* Apply grayscale effect */
 }
 
 .carousel-inner {
-  color: black; /* Testimonial text color */
+  color: black;
+  /* Testimonial text color */
   text-align: center;
   padding: 20px;
-  word-wrap: break-word; /* Enable word wrap for testimonial text */
+  word-wrap: break-word;
+  /* Enable word wrap for testimonial text */
 }
 
 .carousel-indicators {
-  bottom: 20px; /* Adjust indicator position */
+  bottom: 20px;
+  /* Adjust indicator position */
 }
 
-.carousel-control-prev, .carousel-control-next {
-  top: 50%; /* Adjust control position */
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50%;
+  /* Adjust control position */
   transform: translateY(-50%);
-  background-color: rgba(227, 220, 220, 0.5); /* Control background color */
-  border-radius: 50px; /* Control border radius */
+  background-color: rgba(227, 220, 220, 0.5);
+  /* Control background color */
+  border-radius: 50px;
+  /* Control border radius */
 }
 
-.carousel-control-prev-icon, .carousel-control-next-icon {
-  color: #fff; /* Control icon color */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  color: #fff;
+  /* Control icon color */
 }
 
 /* Testimonial Text */
 .testimonial-text {
   text-align: center;
-  font-size: 1.5rem; /* Adjust font size */
+  font-size: 1.5rem;
+  /* Adjust font size */
   line-height: 1.5;
 }
 
@@ -253,3 +286,77 @@
 .testimonial-text em {
   font-style: italic;
 }
+
+
+/* Responsive */
+/* Responsive adjustments for smaller screens */
+@media (max-width: 767.98px) {
+  .jumbotron {
+    height: auto;
+    /* Add other styles for smaller screens */
+  }
+  .hero-2 {
+    flex-direction: column; /* Display elements in a column */
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .hero-txt {
+    order: 1; /* Display text first */
+    padding: 0; /* Remove horizontal padding */
+  }
+
+  .hero-title {
+    order: 3; /* Display title last */
+    margin-top: 20px; /* Add space between text and title */
+  }
+
+  .hero-img {
+    order: 2; /* Display image after text */
+    margin-top: 20px; /* Add space between text and image */
+  }
+
+  .hero-img img {
+    width: 100%; /* Adjust image width */
+  }
+
+  .hero-title span {
+    border-bottom: 2px solid yellow;
+  }
+
+  .hero3-main-title {
+    text-align: center; /* Center-align the title */
+    margin-bottom: 20px; /* Add space below the title */
+  }
+
+  .cards-container {
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .card {
+    flex: 0 0 100%; /* Full width for cards */
+    margin-bottom: 20px; /* Add space between cards */
+  }
+
+  .testimonial-container {
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .testimonial-bg {
+    padding: 50px 0; /* Adjust padding for the background */
+  }
+
+  .carousel-indicators {
+    bottom: 10px; /* Adjust indicator position */
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    top: 40%; /* Adjust control position */
+  }
+
+  .testimonial-text {
+    font-size: 1.2rem; /* Adjust font size for testimonials */
+  }
+  
+}
+

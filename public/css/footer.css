@@ -1,14 +1,13 @@
 footer {
-    
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: auto;
     display: flex;
     justify-content: space-around;
     padding: 20px 0;
     background-color: #333;
     color: #fff;
-  }
+}
   
 
 footer ul {
@@ -40,3 +39,17 @@ footer li a::after {
 footer li a:hover::after {
     width: 100%;
 }
+
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    footer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    footer div {
+      margin-bottom: 15px; /* Adjust space between elements */
+    }
+  }

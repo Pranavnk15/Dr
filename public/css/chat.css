@@ -2,8 +2,10 @@
 
 
 
-
-.container {
+html {
+  scroll-behavior: smooth;
+}
+#chatContainer {
   --light-color: #fff;
   height: 420px;
   width: 350px;
@@ -123,4 +125,51 @@
 .cht {
   width: 60px;
   height: 60px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  #chatContainer {
+    height: 320px; /* Adjust height for smaller screens */
+    width: 280px; /* Adjust width for smaller screens */
+    bottom: 20px; /* Adjust position for smaller screens */
+    right: 20px;
+    z-index: 100; /* Adjust position for smaller screens */
+  }
+
+  .chat-header {
+    height: 50px; /* Adjust header height for smaller screens */
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+    padding: 0px 20px; /* Adjust padding for smaller screens */
+  }
+
+  .chat-header .logo {
+    height: 30px; /* Adjust logo height for smaller screens */
+    width: 30px; /* Adjust logo width for smaller screens */
+  }
+
+  .chat-body {
+    height: 210px; /* Adjust body height for smaller screens */
+  }
+
+  .chat-input {
+    height: 50px; /* Adjust input section height for smaller screens */
+  }
+
+  #txtInput {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+
+  .chatbot-message,
+  .user-message {
+    max-width: 200px; /* Adjust max-width for messages on smaller screens */
+  }
+
+  /* Style for chat icon on smaller screens */
+  .chat-icon {
+    width: 50px; /* Adjust width for chat icon on smaller screens */
+    height: 50px; /* Adjust height for chat icon on smaller screens */
+    bottom: 25px; /* Adjust position for chat icon on smaller screens */
+    right: 30px; /* Adjust position for chat icon on smaller screens */
+  }
 }

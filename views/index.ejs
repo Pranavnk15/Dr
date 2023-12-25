@@ -1,219 +1,230 @@
 <%- include("partials/mainHeader"); -%>
 
-<!-- CHATBOT -->
-<div class="container" id="chatContainer" style="display: none;">
-  <div class="chat-header">
-    <div class="logo">
-      <img src="images/tooth.png" alt="cwt" />
+  <!-- CHATBOT -->
+  <div class="container" id="chatContainer" style="display: none;">
+    <div class="chat-header">
+      <div class="logo">
+        <img src="images/tooth.png" alt="cwt" />
+      </div>
+      <div class="title">Let's Chat</div>
+      <div class="close-icon" onclick="closeChatbot()">❌</div>
     </div>
-    <div class="title">Let's Chat</div>
-    <div class="close-icon" onclick="closeChatbot()">❌</div>
+    <div class="chat-body"></div>
+    <div class="chat-input">
+      <div class="input-sec">
+        <input type="text" id="txtInput" placeholder="Type hello to begin..." autofocus />
+      </div>
+      <div class="send">
+        <img src="images/send.svg" alt="send" />
+      </div>
+    </div>
   </div>
-  <div class="chat-body"></div>
-  <div class="chat-input">
-    <div class="input-sec">
-      <input type="text" id="txtInput" placeholder="Type hello to begin..." autofocus />
+
+  <!-- Chat icon -->
+  <div class="chat-icon" id="chatIcon">
+    <img class='cht' src="images/chat.png" alt="Chat Icon" />
+  </div>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+
+  <div class="jumbotron" style="margin-bottom: 0px; padding-top: 200px; ">
+
+    <h2 class="display-3 ">SmileLine Dental Clinic</h2>
+    <h2 class="">Best Dentist in Chinchwad, <br> trusted and acknowledged by Many.</h2><br>
+    <hr>
+    <h3 class=""> Equipped with all modern equipments and resources <br> required for a perfect dental treatment.</h3>
+    <p class="lead">
+      <br>
+
+      <a href="/services" class="btn btn-light  btn-lg" role="button" aria-pressed="true">Explore Our Services</a>
+      <a href="https://www.practo.com/Pune/doctor/dr-pradeep-makasare-dentist-2" class="btn btn-light  btn-lg"
+        role="button" aria-pressed="true">Book an Appointment</a>
+    </p>
+  </div>
+
+  <div class="hero-2">
+    <div class="hero-txt">
+      <div class="hero-title">
+        <h1>Your Smile = <span> Our Goal </span></h1>
+        <p> You'll laugh, feel relaxed, get greate care, and <br>
+          look forward to comming back.</p>
+      </div>
+      <hr class="hori">
+      <div class="hero-para">
+        At SmileLine Dental Clinic, We aim to create a positive experience each <br>
+        time. We understand that going to dentist can sometimes feel stressfull, <br>
+        so we work with you to ensure you feel comfortable, informed, and at ease.
+        <br>
+        <br>
+        Our mission is to educate you about your dental needs by providing <br>
+        comprehensive, quality care in a compassionate, professional environment. <br>
+        Discover more services and coneniences under one roof with smart <br>
+        dental care at SmileLine Dentistry of Chinchwad, Pune.
+      </div>
     </div>
-    <div class="send">
-      <img src="images/send.svg" alt="send" />
+    <div class="hero-img">
+      <img src="images/woman.png" alt="">
     </div>
   </div>
-</div>
 
-<!-- Chat icon -->
-<div class="chat-icon" id="chatIcon">
-  <img class='cht' src="images/chat.png" alt="Chat Icon" />
-</div>
-
-
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="script.js"></script>
-
-<div class="jumbotron" style="margin-bottom: 0px; padding-top: 200px; "> 
-
-  <h2 class="display-3 ">SmileLine Dental Clinic</h2>
-  <h2 class="">Best Dentist in Chinchwad, <br> trusted and acknowledged by Many.</h2><br>
-  <hr>
-  <h3 class=""> Equipped with all modern equipments and resources <br> required for a perfect dental treatment.</h3>
-  <p class="lead">
-    <br>
-
-    <a href="/services" class="btn btn-light  btn-lg" role="button" aria-pressed="true">Explore Our Services</a>
-    <a href="https://www.practo.com/Pune/doctor/dr-pradeep-makasare-dentist-2" class="btn btn-light  btn-lg" role="button" aria-pressed="true">Book an Appointment</a>
-  </p>
-</div>
-
-<div class="hero-2">
-  <div class="hero-txt">
-    <div class="hero-title">
-      <h1>Your Smile = <span> Our Goal </span></h1>
-      <p> You'll laugh, feel relaxed, get greate care, and <br>
-      look forward to comming back.</p>
+  <div class="hero-3">
+    <div class="hero3-main-title">
+      <h1>Desntistry Designed <span>for You</span></h1>
+      <h3>You're more than a patient. You're family.</h3>
     </div>
     <hr class="hori">
-    <div class="hero-para">
-      At SmileLine Dental Clinic, We aim to create a positive experience each <br>
-      time. We understand that going to dentist can sometimes feel stressfull, <br>
-      so we work with you to ensure you feel comfortable, informed, and at ease.
-      <br>
-      <br>
-      Our mission is to educate you about your dental needs by providing <br>
-      comprehensive, quality care in a compassionate, professional environment. <br>
-      Discover more services and coneniences under one roof with smart <br>
-      dental care at SmileLine Dentistry of Chinchwad, Pune.
-    </div>
-  </div>
-  <div class="hero-img">
-<img src="images/woman.png" alt="">
-  </div>
-</div>
-
-<div class="hero-3">
-  <div class="hero3-main-title">
-    <h1>Desntistry Designed <span>for You</span></h1>
-    <h3>You're more than a patient. You're family.</h3>
-  </div>
-  <hr class="hori">
-  <div class="cards-container">
-    <div class="card card-1">
-      <div class="hero3-img">
-        <img src="images/dental-1.png" alt="">
-      </div>
-      <div class="hero3-txt">
-        <div class="hero3-title">
-          <h2>Smile Connections</h2>
+    <div class="cards-container">
+      <div class="card card-1">
+        <div class="hero3-img">
+          <img src="images/dental-1.png" alt="">
         </div>
-        <div class="hero3-para">
-          Feel right at home at SmileLine Dentistry.
-          Our dental team takes the time to get to know you so we can deliver the best care within your comfort level.
-        </div>
-      </div>
-    </div>
-    <div class="card card-2">
-      <div class="hero3-img">
-        <img src="images/dental-checkup.png" alt="">
-      </div>
-      <div class="hero3-txt">
-        <div class="hero3-title">
-          <h2>Guiding You</h2>
-        </div>
-        <div class="hero3-para">
-          Education empowers, and you deserve to make informed decisions that fit your goals and budget. Learn about your dental health and ways to improve or maintain it with modern SmileLine dentistry.
-        </div>
-      </div>
-    </div>
-    <div class="card card-3">
-      <div class="hero3-img">
-        <img src="images/dental-insurance.png" alt="">
-      </div>
-      <div class="hero3-txt">
-        <div class="hero3-title">
-          <h2>Keeping You Healthy</h2>
-        </div>
-        <div class="hero3-para">
-          More services under one roof make it easier to connect oral and overall health to keep you healthy. Our comprehensive dental services include family, cosmetic, and restorative care.
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<section class="testimonial-section">
-  <div class="test-title">
-    <h1>Testimonials</h1>
-  </div>
-  <div class="testimonial-container">
-  <div class="testimonial-bg" style="background-image: url('images/bg.jpg');">
-    <div class="container-test">
-      <div id="testimonials" class="carousel slide" data-ride="carousel">
-        <!-- Testimonials Carousel Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#testimonials" data-slide-to="0" class="active"></li>
-          <!-- Add more indicators for each testimonial item -->
-        </ol>
-        
-        <!-- Testimonials Carousel Inner -->
-        <div class="carousel-inner">
-          <!-- Testimonial Item 1 -->
-          <div class="carousel-item active">
-            <h6 class="testimonial-text">I had excellent experience with root canal treatment. Dr. Makasare sir is a grest dentist as well as good human being. After root canal treatment, I feel totaly releaf with my tooth. I personally recommend one should visit Dr. Makasare for dental health....thank you sir..</h6>
-            <em>Vikas Chinchore, Pune</em>
+        <div class="hero3-txt">
+          <div class="hero3-title">
+            <h2>Smile Connections</h2>
           </div>
-          <!-- Testimonial Item 2 -->
-          <div class="carousel-item">
-            <h6 class="testimonial-text">I got very nice treatment here in Smila Line Dental Clinic. I was suffering from wisdom molar tooth, so it was easily removed by doctor within 5 minutes. He also gave medication in proper way. I can prefer this clinic for dental treatment with fullest.</h6>
-            <em>Sulbha Ghadling, Chinchwad</em>
-          </div>
-          <!-- Add more carousel items for each testimonial -->
-          <div class="carousel-item">
-            <h6 class="testimonial-text">Very nice Experience with Dr. Makasare. Taken treatment for my wife. He has answered all the small small queries and made us comfortable about the treatment.
-              I will highly recommend this dentist.</h6>
-            <em>Vikrant Gawade, Chinchwad</em>
-          </div>
-          <div class="carousel-item">
-            <h6 class="testimonial-text">I am having very good experience with smile line dental clinic and special thanks to Dr Pradeep who treat my wife and my Mother root canal treatment. My wife and Mother both are happy for doing treatment here with less pain in teeth.</h6>
-            <em>Deepak Burkul, Chinchwad</em>
+          <div class="hero3-para">
+            Feel right at home at SmileLine Dentistry.
+            Our dental team takes the time to get to know you so we can deliver the best care within your comfort level.
           </div>
         </div>
-        
-        <!-- Testimonials Carousel Controls -->
-        <a class="carousel-control-prev" href="#testimonials" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#testimonials" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+      </div>
+      <div class="card card-2">
+        <div class="hero3-img">
+          <img src="images/dental-checkup.png" alt="">
+        </div>
+        <div class="hero3-txt">
+          <div class="hero3-title">
+            <h2>Guiding You</h2>
+          </div>
+          <div class="hero3-para">
+            Education empowers, and you deserve to make informed decisions that fit your goals and budget. Learn about
+            your dental health and ways to improve or maintain it with modern SmileLine dentistry.
+          </div>
+        </div>
+      </div>
+      <div class="card card-3">
+        <div class="hero3-img">
+          <img src="images/dental-insurance.png" alt="">
+        </div>
+        <div class="hero3-txt">
+          <div class="hero3-title">
+            <h2>Keeping You Healthy</h2>
+          </div>
+          <div class="hero3-para">
+            More services under one roof make it easier to connect oral and overall health to keep you healthy. Our
+            comprehensive dental services include family, cosmetic, and restorative care.
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
-</section>
 
 
-<div style="text-align: center; padding: 20px;"><h2>Visit SmileLine </h2></div>
-<div class="contact-section">
-  
-  <div class="contact-info">
-    
-      <h1> Schedule Your Visit</h1> 
-      You can't pick your family, but you can pick your<br/>
-      Smartest Dentist in town <br/>
-      <br>
-      <br>
-      <img src="images/placeholder.png" alt="">Kamla Corner, Chinchwad - 411033 <br/>
-      <img src="images/phone-call.png" alt="">Phone: 910-762-0786 <br/>
-      <img src="images/mail-1.png" alt="">Email: info@hoggardfamilydentistry.com <br/>
-      <br>
-    <a href="/services" class="btn btn-dark  btn-lg" role="button" aria-pressed="true">Explore Our Services</a>
-    <a href="https://www.practo.com/Pune/doctor/dr-pradeep-makasare-dentist-2" class="btn btn-dark  btn-lg" role="button" aria-pressed="true">Book an Appointment</a>
-  
+
+  <section class="testimonial-section">
+    <div class="test-title">
+      <h1>Testimonials</h1>
+    </div>
+    <div class="testimonial-container">
+      <div class="testimonial-bg" style="background-image: url('images/bg.jpg');">
+        <div class="container-test">
+          <div id="testimonials" class="carousel slide" data-ride="carousel">
+            <!-- Testimonials Carousel Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#testimonials" data-slide-to="0" class="active"></li>
+              <!-- Add more indicators for each testimonial item -->
+            </ol>
+
+            <!-- Testimonials Carousel Inner -->
+            <div class="carousel-inner">
+              <!-- Testimonial Item 1 -->
+              <div class="carousel-item active">
+                <h6 class="testimonial-text">I had excellent experience with root canal treatment. Dr. Makasare sir is a
+                  grest dentist as well as good human being. After root canal treatment, I feel totaly releaf with my
+                  tooth. I personally recommend one should visit Dr. Makasare for dental health....thank you sir..</h6>
+                <em>Vikas Chinchore, Pune</em>
+              </div>
+              <!-- Testimonial Item 2 -->
+              <div class="carousel-item">
+                <h6 class="testimonial-text">I got very nice treatment here in Smila Line Dental Clinic. I was suffering
+                  from wisdom molar tooth, so it was easily removed by doctor within 5 minutes. He also gave medication
+                  in proper way. I can prefer this clinic for dental treatment with fullest.</h6>
+                <em>Sulbha Ghadling, Chinchwad</em>
+              </div>
+              <!-- Add more carousel items for each testimonial -->
+              <div class="carousel-item">
+                <h6 class="testimonial-text">Very nice Experience with Dr. Makasare. Taken treatment for my wife. He has
+                  answered all the small small queries and made us comfortable about the treatment.
+                  I will highly recommend this dentist.</h6>
+                <em>Vikrant Gawade, Chinchwad</em>
+              </div>
+              <div class="carousel-item">
+                <h6 class="testimonial-text">I am having very good experience with smile line dental clinic and special
+                  thanks to Dr Pradeep who treat my wife and my Mother root canal treatment. My wife and Mother both are
+                  happy for doing treatment here with less pain in teeth.</h6>
+                <em>Deepak Burkul, Chinchwad</em>
+              </div>
+            </div>
+
+            <!-- Testimonials Carousel Controls -->
+            <a class="carousel-control-prev" href="#testimonials" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#testimonials" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div style="text-align: center; padding: 20px;">
+    <h2>Visit SmileLine </h2>
   </div>
-    
-  
+  <div class="contact-section">
+
+    <div class="contact-info">
+
+      <h1> Schedule Your Visit</h1>
+      You can't pick your family, but you can pick your<br />
+      Smartest Dentist in town <br />
+      <br>
+      <br>
+      <img src="images/placeholder.png" alt="">Kamla Corner, Chinchwad - 411033 <br />
+      <img src="images/phone-call.png" alt="">Phone: 910-762-0786 <br />
+      <img src="images/mail-1.png" alt="">Email: info@hoggardfamilydentistry.com <br />
+      <br>
+      <a href="/services" class="btn btn-dark  btn-lg" role="button" aria-pressed="true">Explore Our Services</a>
+      <a href="https://www.practo.com/Pune/doctor/dr-pradeep-makasare-dentist-2" class="btn btn-dark  btn-lg"
+        role="button" aria-pressed="true">Book an Appointment</a>
+
+    </div>
     <div class="contact-form">
       <form action="/submit" method="post">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required><br><br>
-        
+
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required><br><br>
-        
+
         <label for="phone">Phone Number:</label>
         <input type="tel" id="phone" name="phone" required><br><br>
-        
+
         <label for="comments">Comments:</label><br>
         <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
         <button type="submit" value="Submit"> Contact us</button>
-        
+
       </form>
     </div>
   </div>
 
-<%- include("partials/mainFooter"); -%>
+  <%- include("partials/mainFooter"); -%>

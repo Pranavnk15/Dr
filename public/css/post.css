@@ -1,0 +1,36 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    /* Other global styles */
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+/* Styles for post content */
+.post-h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    /* Other styles for the heading */
+}
+
+.post-para {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    /* Other styles for paragraphs */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .post-h1 {
+        font-size: 1.8rem;
+        /* Adjust heading size for smaller screens */
+    }
+
+    .post-para {
+        font-size: 1rem;
+        /* Adjust paragraph font size for smaller screens */
+    }
+    /* Add other responsive styles as needed */
+}

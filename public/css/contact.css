@@ -1,9 +1,13 @@
+/* Media query for smaller screens */
+html {
+  scroll-behavior: smooth;
+}
+
 .contact-section {
     margin: 20px;
     display: flex;
-    justify-content: space-between;
-    
-  }
+    justify-content: space-between; 
+}
   
   .contact-info {
     font-size: 1.5rem;
@@ -80,9 +84,24 @@
     margin-bottom: 50px;
   }
   
-  .location .map {
-    width: 100%;
-    height: 400px; /* Set a fixed height */
-  }
-  
  
+ /* Media query for smaller screens */
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+  }
+
+  .contact-info {
+    width: 90%; /* Adjust width */
+    margin-bottom: 20px; /* Add space between sections */
+  }
+
+  .contact-form {
+    width: 90%; /* Adjust width */
+  }
+
+  .map iframe{
+    width: 100%; /* Make the map take full width */
+  }
+}
