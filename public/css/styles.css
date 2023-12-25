@@ -294,6 +294,13 @@ html {
     height: auto;
     /* Add other styles for smaller screens */
   }
+
+  .jumbotron a{
+    margin: 5px;
+  }
+  .contact-info a{
+    margin: 5px;
+  }
   .hero-2 {
     flex-direction: column; /* Display elements in a column */
     padding: 20px; /* Adjust padding for smaller screens */
