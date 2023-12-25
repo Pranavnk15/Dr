@@ -2,7 +2,6 @@
 html {
   scroll-behavior: smooth;
 }
-
 /* Hamburger menu styles */
 .hamburger-menu {
   display: none;
@@ -56,7 +55,7 @@ html {
 }
 
 /* Media query for smaller screens */
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .navbar-middle {
     display: none;
     /* Hide the middle links for smaller screens */
