@@ -379,6 +379,10 @@ html {
   padding-top: 50px;
   height: 100px;
 }
+
+.pad{
+  padding-top: 30px;
+}
 @media (max-width: 768px) {
   .review1{
     padding-left: 0px;
