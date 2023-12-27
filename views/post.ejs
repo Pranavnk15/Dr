@@ -1,6 +1,11 @@
 <%- include("partials/blogHeader"); -%>
 
-  <h1 class="post-h1"><%=title%></h1>
-  <p class="post-para"><%=content%></p>
+<h1 class="post-h1"><%= title %></h1>
+<p class="post-para"><%= content %></p>
+
+
+<% if (imagePath) { %>
+  <img src="<%= imagePath %>" class="post-image" alt="Post Image">
+<% } %>
 
 <%- include("partials/blogFooter"); -%>

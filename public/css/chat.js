@@ -81,8 +81,8 @@ const getChatbotResponse = (userInput) => {
     return "Sure, let's schedule an appointment for you. Fill out the contact us form.";
   } else if (userInput.includes('contact') || userInput.includes('address')) {
     return "You can contact us at the given address, or ring us at the given number";
-  } else if (userInput.includes('treatments')) {
-    return "For detail Info about various treatments provided please visit our treatments page";
+  } else if (userInput.includes('treatments') || userInput.includes('treatment') || userInput.includes('services') || userInput.includes('service')) {
+    return "For detail Info about various treatments provided please visit our treatments page"
   } else if (userInput.includes('hours') || userInput.includes('timing') || userInput.includes('timings')) {
     return "Our clinic is open from Monday to Friday, 9 AM to 5 PM. We are closed on weekends.";
   } 

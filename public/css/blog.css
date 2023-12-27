@@ -41,6 +41,21 @@ html {
     color: #fff;
   }
 
+  /* In your CSS file or style section */
+.blog-item {
+  margin-bottom: 10px;
+}
+
+.blog-item h3 {
+  display: inline;
+  margin-right: 10px;
+}
+
+.blog-item form {
+  display: inline;
+}
+
+
   /* Media query for smaller screens */
 @media (max-width: 768px) {
     .container-fluid {

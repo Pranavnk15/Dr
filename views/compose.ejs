@@ -1,13 +1,28 @@
 <%- include("partials/blogHeader"); -%>
-    <h1>Compose</h1>
-    <form class="" action="/compose" method="post">
-      <div class="form-group">
-        <label>Title</label>
-        <input class="form-control" type="text" name="postTitle">
-        <label>Post</label>
-        <textarea class="form-control" name="postBody" rows="5" cols="30"></textarea>
-      </div>
-      <button class="btn btn-primary" type="submit" name="button">Publish</button>
-    </form>
+<h1>Compose</h1>
+<form class="" action="/compose" method="post" enctype="multipart/form-data">
+  <div class="form-group">
+    <label>Title</label>
+    <input class="form-control" type="text" name="postTitle">
+    <label>Post</label>
+    <textarea class="form-control" name="postBody" rows="5" cols="30"></textarea>
+    <label>Upload Image</label>
+    <input type="file" name="postImage">
+  </div>
+  <button class="btn btn-primary" type="submit" name="button">Publish</button>
+</form>
+<hr>
+<h1>Previous Blogs...</h1>
+<!-- Display headings of all blogs with delete options -->
+<div class="blog-list">
+  <% blogs.forEach(blog => { %>
+    <div class="blog-item">
+      <h3><%= blog.title %></h3>
+      <form action="/delete/<%= blog._id %>" method="POST">
+        <button class="btn btn-danger" type="submit">Delete</button>
+      </form>
+    </div>
+  <% }); %>
+</div>
 
 <%- include("partials/blogFooter"); -%>

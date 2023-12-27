@@ -4,6 +4,8 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const _ = require("lodash");
 var dotenv = require('dotenv');
+const multer = require('multer');
+
 dotenv.config();
 
 const app = express();
@@ -48,9 +50,9 @@ const userSchema = new mongoose.Schema({
 
 const postSchema = {
     title: String,
-    content: String
-  };
-
+    content: String,
+    imagePath: String // Add imagePath field for storing image paths
+};
 const User = mongoose.model('User', userSchema);
 const Post = mongoose.model("Post", postSchema);
 
@@ -147,20 +149,75 @@ app.get("/blog", async function(req, res) {
     }
 });
 
-  app.post("/compose", async function(req, res) {
-    const post = new Post({
-        title: req.body.postTitle,
-        content: req.body.postBody
-    });
-
-    try {
-        await post.save();
-        res.redirect("/blog");
-    } catch (err) {
-        console.error('Error saving post to MongoDB: ' + err.message);
-        res.status(500).send('Error composing post');
+// Multer setup for handling file uploads
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, 'public/uploads'); // Destination folder for uploaded images
+    },
+    filename: function (req, file, cb) {
+      cb(null, file.originalname); // Use the original filename for the uploaded image
     }
-});
+  });
+
+  const upload = multer({ storage: storage });
+
+// Route handling image upload and form submission
+// Previous code for saving posts with image uploads
+app.post('/compose', upload.single('postImage'), async function(req, res) {
+    const post = new Post({
+      title: req.body.postTitle,
+      content: req.body.postBody,
+      // Assuming 'postImage' is the name attribute in the form for the uploaded image
+      imagePath: req.file ? `/uploads/${req.file.filename}` : null // Save the image path in your database
+      // Add 'imagePath' property in your Post schema accordingly
+    });
+  
+    try {
+      await post.save();
+      res.redirect("/blog");
+    } catch (err) {
+      console.error('Error saving post to MongoDB: ' + err.message);
+      res.status(500).send('Error composing post');
+    }
+  });
+  
+  // Route to render the compose page with blog list for deletion
+  app.get('/compose', async (req, res) => {
+    try {
+      const blogs = await Post.find({}, 'title _id').exec(); // Retrieve blog titles and IDs
+      res.render('compose', { blogs: blogs });
+    } catch (err) {
+      console.error('Error retrieving blog list:', err);
+      res.status(500).send('Error retrieving blog list');
+    }
+  });
+  
+  // Route to handle deletion of individual blog posts
+  app.post('/delete/:id', async (req, res) => {
+    const blogId = req.params.id;
+    try {
+      await Post.findByIdAndDelete(blogId);
+      res.redirect('/compose'); // Redirect back to the compose page after deletion
+    } catch (err) {
+      console.error('Error deleting blog:', err);
+      res.status(500).send('Error deleting blog');
+    }
+  });
+  
+//   app.post("/compose", async function(req, res) {
+//     const post = new Post({
+//         title: req.body.postTitle,
+//         content: req.body.postBody
+//     });
+
+//     try {
+//         await post.save();
+//         res.redirect("/blog");
+//     } catch (err) {
+//         console.error('Error saving post to MongoDB: ' + err.message);
+//         res.status(500).send('Error composing post');
+//     }
+// });
 
 
 app.get("/compose", function(req, res){
@@ -180,7 +237,8 @@ app.get("/aboutus", function(req, res){
 });
 
 
-app.get("/posts/:postId", async function(req, res) {
+// Assuming 'post' contains the data you're sending to the post.ejs file
+app.get('/posts/:postId', async function(req, res) {
     try {
         const requestedPostId = req.params.postId;
         const post = await Post.findOne({ _id: requestedPostId }).exec();
@@ -191,7 +249,8 @@ app.get("/posts/:postId", async function(req, res) {
         } else {
             res.render("post", {
                 title: post.title,
-                content: post.content
+                content: post.content,
+                imagePath: post.imagePath // Make sure imagePath is retrieved from the database
             });
         }
     } catch (err) {
@@ -199,6 +258,7 @@ app.get("/posts/:postId", async function(req, res) {
         res.status(500).send('Error retrieving post');
     }
 });
+
 // Sample route for handling login form submission
 app.post('/login', (req, res) => {
     const { email, password } = req.body;
