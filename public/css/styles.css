@@ -365,4 +365,29 @@ html {
   }
   
 }
+.review1{
+  padding-left: 350px;
+}
+.review2{
+  padding-left: 235px;
+  padding-top: 50px;
+  height: 100px;
+}
 
+.review3{
+  padding-left: 50px;
+  padding-top: 50px;
+  height: 100px;
+}
+@media (max-width: 768px) {
+  .review1{
+    padding-left: 0px;
+  }
+  .ratings{
+    padding-left: 20px;
+  }
+.review2{
+  padding-left: 70px;
+
+}
+}
