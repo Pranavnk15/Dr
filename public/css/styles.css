@@ -381,7 +381,7 @@ html {
 }
 @media (max-width: 768px) {
   .review1{
-    padding-left: 0px;
+    padding-left: 10px;
   }
   .ratings{
     padding-left: 20px;
