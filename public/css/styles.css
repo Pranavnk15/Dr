@@ -385,7 +385,8 @@ html {
     padding-top: 30px;
   }
   .ratings{
-    padding-left: 20px;
+    
+    text-align: center;
   }
 .review2{
   padding-left: 135px;
