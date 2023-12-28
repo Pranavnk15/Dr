@@ -61,8 +61,8 @@ position: absolute;
 }
 @media (max-width: 768px) {
   .doctor4{
-    height:500px;
-    width:500px;
+    height:300px;
+    width:300px;
     positon:absolute;
   }
   .intro3{
