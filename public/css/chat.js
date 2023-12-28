@@ -84,7 +84,7 @@ const getChatbotResponse = (userInput) => {
   } else if (userInput.includes('treatments') || userInput.includes('treatment') || userInput.includes('services') || userInput.includes('service')) {
     return "For detail Info about various treatments provided please visit our treatments page"
   } else if (userInput.includes('hours') || userInput.includes('timing') || userInput.includes('timings')) {
-    return "Our clinic is open from Monday to Friday, 9 AM to 2 PM & 5 PM to 9:30 PM. We are closed on Sunday.";
+    return "Our clinic is open from Monday to Friday, 9 AM to 2 PM & 5 PM to 9:30 PM. We are closed on weekends.";
   } 
   return "I'm sorry, I may not have the information you're looking for. Please contact us directly for more assistance.";
 };
