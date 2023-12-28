@@ -63,11 +63,14 @@ position: absolute;
   .doctor4{
     height:300px;
     width:300px;
-    positon:absolute;
+    positon:relative;
   }
   .intro3{
     margin-left:0px;
     margin-top:350px;
-    position:relative;
+    position:absolute;
+}
+  .intro4{
+    
 }
 }
