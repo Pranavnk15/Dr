@@ -1,0 +1,65 @@
+<%- include("partials/mainHeader"); -%>
+
+<div class="gallery">
+<div class="gallery1">
+    <h1 style="text-align: center;">Achievements</h1>
+    <p>
+        <img src="images/achievements/ach1.jpeg">
+        <img src="images/achievements/ach2.jpeg">
+        <img src="images/achievements/ach3.jpeg">
+        <img src="images/achievements/ach4.jpeg">
+        <img src="images/achievements/ach5.jpeg">
+  
+    </p>
+    
+</div>
+<div class="gallery2">
+    <h1 style="text-align: center;padding: 5px;">From Dr's Desk.</h1>
+    <!-- Replace images with videos -->
+    <p>
+        <video class="video-item">
+            <source src="images/videos/vd3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video class="video-item">
+            <source src="images/videos/vd1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video class="video-item">
+            <source src="images/videos/vd2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </p>
+</div>
+ 
+     
+    <div class="gallery3">
+        <h1 style="text-align: center;padding: 5px;">Our Clinic</h1>
+        <p>
+            <img src="images/generalPhotos/1.jpeg">
+            <img src="images/generalPhotos/2.jpeg">
+            <img src="images/generalPhotos/3.jpeg">
+            <img src="images/generalPhotos/4.jpeg">
+          
+        </p>
+    </div>
+    
+</div>
+<script>
+    const videoItems = document.querySelectorAll('.video-item');
+
+videoItems.forEach((video) => {
+    video.addEventListener('mouseover', () => {
+        video.play();
+    });
+});
+videoItems.forEach((video) => {
+    video.addEventListener('mouseout', () => {
+        video.pause();
+    });
+});
+</script>
+
+<%- include("partials/mainFooter"); -%>
+
+

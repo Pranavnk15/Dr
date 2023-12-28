@@ -32,8 +32,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // MongoDB Connection
 mongoose.connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
+    
 }).then(() => {
     console.log('Connected to MongoDB');
 }).catch((err) => {
@@ -204,20 +203,10 @@ app.post('/compose', upload.single('postImage'), async function(req, res) {
     }
   });
   
-//   app.post("/compose", async function(req, res) {
-//     const post = new Post({
-//         title: req.body.postTitle,
-//         content: req.body.postBody
-//     });
 
-//     try {
-//         await post.save();
-//         res.redirect("/blog");
-//     } catch (err) {
-//         console.error('Error saving post to MongoDB: ' + err.message);
-//         res.status(500).send('Error composing post');
-//     }
-// });
+  app.get("/gallery", function(req, res){
+    res.render("gallery");
+});
 
 
 app.get("/compose", function(req, res){
