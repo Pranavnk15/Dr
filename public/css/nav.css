@@ -65,6 +65,9 @@
     font-size: 16px; /* Further decreased font size for extra small screens */
     margin-right: 10px; /* Further reduced margin for extra small screens */
   }
+  .navbar-nav .nav-item.gallery-item {
+    display: none;
+  }
 
   /* Your existing media query styles for smaller screens */
   .navbar-middle {

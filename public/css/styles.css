@@ -296,6 +296,9 @@ html {
 background: linear-gradient(344deg, rgba(2,0,36,1) 0%, rgba(53,53,108,1) 32%, rgba(0,212,255,1) 100%);
     /* Add other styles for smaller screens */
   }
+  .navbar-nav .nav-item.gallery-item {
+    display: none;
+  }
 
   .jumbotron a{
     margin: 5px;
