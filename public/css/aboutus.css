@@ -68,7 +68,7 @@ position: absolute;
     positon:relative;
   }
   .intro3{
-    margin-left:70px;
+    margin-left:75px;
     margin-top:300px;
     position:absolute;
     text-align:center;
@@ -76,7 +76,7 @@ position: absolute;
   .intro4{
     text-align:center;
     margin-top:375px;
-    margin-left:70px;
+    margin-left:75px;
     position:absolute;
 }
  .image1{
@@ -111,6 +111,5 @@ position: absolute;
 } 
   .imagez{
   margin-top: 1300px;
-    margin-left:0px;
   }
 }
