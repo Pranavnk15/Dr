@@ -59,59 +59,44 @@ position: absolute;
   margin-left: 150px;
 
 }
-@media (max-width: 768px) {
-  .doctor4{
-    height:250px;
-    width:200px;
-    margin-top:50px;
-    margin-left:85px;
-    positon:relative;
-  }
-  .intro3{
-    margin-left:90px;
-    margin-top:350px;
-    position:absolute;
-    text-align:center;
-}
-  .intro4{
-    text-align:center;
-    margin-top:420px;
-    margin-left:90px;
-    position:absolute;
-}
- .image1{
-  height: 200px;
-  width: 200px;
 
-}
-.image2{
-  height: 200px;
-  width: 200px;
-  
-}
-.image3{
-  height: 200px;
-  width: 200px;
-  
-}
-.image4{
-  height: 200px;
-  width: 200px;
-  
-}
-.image5{
-  height: 200px;
-  width: 200px;
-  
-}
-.image6{
-  height: 200px;
-  width: 200px;
-} 
-  .imagez{
-  margin-top: 1500px;
+/* Media Query for responsiveness */
+@media screen and (max-width: 768px) {
+  .images {
+    padding-left: 0; /* Remove left padding */
+    text-align: center; /* Center align images */
   }
-  .images{
-  padding-left: 85px;
-}
+
+  .intro2,
+  .intro3,
+  .intro4 {
+    margin-left: 10px; /* Adjust margins for smaller screens */
+    margin-right: 10px;
+  }
+
+  .intro3,
+  .intro4 {
+    margin-bottom: 20px; /* Add bottom margin */
+  }
+
+  .doctor4 {
+    position: static; /* Remove absolute positioning */
+    width: 100%; /* Set image width to full */
+    max-width: 100%; /* Set maximum width */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 0; /* Remove left margin */
+  }
+
+  .image1,
+  .image2,
+  .image3,
+  .image4,
+  .image5,
+  .image6 {
+    width: 100%; /* Set image width to full */
+    max-width: 100%; /* Set maximum width */
+    height: auto; /* Maintain aspect ratio */
+    padding: 0 0 20px 0; /* Remove padding and add bottom spacing */
+    box-sizing: border-box; /* Adjust box sizing */
+  }
 }
