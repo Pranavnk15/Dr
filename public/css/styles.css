@@ -238,12 +238,12 @@ html {
   background-position: center center;
   padding: 100px 0;
   /* Adjust padding as needed */
-  filter: grayscale(80%);
+  filter: grayscale(50%);
   /* Apply grayscale effect */
 }
 
 .carousel-inner {
-  color: black;
+  color: white;
   /* Testimonial text color */
   text-align: center;
   padding: 20px;
@@ -279,11 +279,13 @@ html {
   font-size: 1.5rem;
   /* Adjust font size */
   line-height: 1.5;
+  color: white;
 }
 
 /* Testimonial Author */
 .testimonial-text em {
   font-style: italic;
+  color: white;
 }
 
 
