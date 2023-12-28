@@ -61,8 +61,8 @@ position: absolute;
 }
 @media (max-width: 768px) {
   .doctor4{
-    height:250px;
-    width:250px;
+    height:200px;
+    width:200px;
     positon:relative;
   }
   .intro3{
@@ -74,6 +74,7 @@ position: absolute;
     text-align:center;
     margin-top:375px;
     margin-left:0px;
+    position:absolute;
 }
  .image1{
   height: 200px;
