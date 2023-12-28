@@ -9,7 +9,7 @@ const multer = require('multer');
 dotenv.config();
 
 const app = express();
-const homeStartingContent = "Lacus vel facilisis volutpat est velit egestas dui id ornare. Semper auctor neque vitae tempus quam. Sit amet cursus sit amet dictum sit amet justo. Viverra tellus in hac habitasse. Imperdiet proin fermentum leo vel orci porta. Donec ultrices tincidunt arcu non sodales neque sodales ut. Mattis molestie a iaculis at erat pellentesque adipiscing. Magnis dis parturient montes nascetur ridiculus mus mauris vitae ultricies. Adipiscing elit ut aliquam purus sit amet luctus venenatis lectus. Ultrices vitae auctor eu augue ut lectus arcu bibendum at. Odio euismod lacinia at quis risus sed vulputate odio ut. Cursus mattis molestie a iaculis at erat pellentesque adipiscing.";
+const homeStartingContent = "Welcome to Dr. Pradeep Makasare's dental blog, a space dedicated to enhancing your oral health and bringing you the latest insights in modern dentistry. Our team is passionate about not just creating beautiful smiles, but also ensuring the overall wellness of our patients. From tips for maintaining optimal oral hygiene to demystifying common dental procedures, we're here to empower you with knowledge and guidance on your journey to a healthier, happier smile.";
 
 // EJS setup
 app.set('view engine', 'ejs');
