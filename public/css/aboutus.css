@@ -63,7 +63,8 @@ position: absolute;
   .doctor4{
     height:200px;
     width:200px;
-    margin-top:100px;
+    margin-top:70px;
+    margin-left:50px;
     positon:relative;
   }
   .intro3{
@@ -106,6 +107,7 @@ position: absolute;
 .image6{
   height: 200px;
   width: 200px;
+  margin-left:0px;
 } 
   .imagez{
   margin-top: 1300px;
