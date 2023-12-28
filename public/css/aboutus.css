@@ -71,9 +71,38 @@ position: absolute;
     position:absolute;
 }
   .intro4{
-    position:absolute;
     text-align:center;
     margin-top:375px;
     margin-left:0px;
 }
+ .image1{
+  height: 200px;
+  width: 200px;
+
+}
+.image2{
+  height: 200px;
+  width: 200px;
+  
+}
+.image3{
+  height: 200px;
+  width: 200px;
+  
+}
+.image4{
+  height: 200px;
+  width: 200px;
+  
+}
+.image5{
+  height: 400px;
+  width: 400px;
+  
+}
+.image6{
+  height: 200px;
+  width: 200px;
+  
+} 
 }
