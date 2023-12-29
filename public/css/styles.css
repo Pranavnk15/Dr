@@ -288,10 +288,37 @@ html {
   color: white;
 }
 
+.view-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  h1 {
+    font-size: 2.5rem; /* Base font size */
+    text-align: center;
+  }
+  
+ 
+}
+
+.360v {
+  max-width: 100%;
+}
 
 /* Responsive */
 /* Responsive adjustments for smaller screens */
 @media (max-width: 767.98px) {
+  .view-container {
+    padding: 0 20px;
+     /* Responsive typography */
+  
+    h1 {
+      font-size: 2rem;
+      padding-right: 10px;
+      padding-left: 10px; /* Adjust font size for smaller screens */
+    }
+
+  }
   .jumbotron {
     height: auto;
     background: rgb(2,0,36);
