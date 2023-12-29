@@ -314,7 +314,7 @@ html {
     margin-top: 10px;
      /* Responsive typography */
       iframe{
-      width: 100%; /* Make the map take full width */
+      width: auto; /* Make the map take full width */
     }
     h1 {
       font-size: 2rem;
