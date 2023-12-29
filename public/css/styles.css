@@ -414,7 +414,7 @@ background: linear-gradient(344deg, rgba(2,0,36,1) 0%, rgba(53,53,108,1) 32%, rg
 
 .review3{
   padding-left: 50px;
-  padding-top: 100px;
+  padding-top: 50px;
   height: 100px;
 }
 @media (max-width: 768px) {
