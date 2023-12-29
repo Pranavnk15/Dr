@@ -301,7 +301,7 @@ html {
  
 }
 
-.360v {
+.view-360 {
   max-width: 100%;
 }
 
@@ -313,9 +313,9 @@ html {
     padding-top: 10px;
     margin-top: 10px;
      /* Responsive typography */
-      iframe{
-      width: auto; /* Make the map take full width */
-    }
+     .view-360 iframe{
+      width: 100%; /* Make the map take full width */
+      }
     h1 {
       font-size: 2rem;
       padding-right: 10px;
