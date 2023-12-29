@@ -310,8 +310,12 @@ html {
 @media (max-width: 767.98px) {
   .view-container {
     padding: 0 20px;
+    padding-top: 10px;
+    margin-top: 10px;
      /* Responsive typography */
-  
+      iframe{
+      width: 100%; /* Make the map take full width */
+    }
     h1 {
       font-size: 2rem;
       padding-right: 10px;
