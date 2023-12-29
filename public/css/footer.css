@@ -52,4 +52,8 @@ footer li a:hover::after {
     footer div {
       margin-bottom: 15px; /* Adjust space between elements */
     }
+
+    footer ul li:nth-child(5) {
+        display: none;
+    }
   }
