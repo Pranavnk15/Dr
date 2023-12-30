@@ -4,7 +4,7 @@ Absolutely! Here's an updated README file for your project, sprinkled with emoji
 
 # SmileLine Full-Stack Website 🌐
 
-Welcome to the SmileLine Full-Stack Website repository! This project was developed during an internship at SmileLine by [Your Name] and Shreeyash Garde. This full-stack website encompasses an array of functionalities and features a robust tech stack.
+Welcome to the SmileLine Full-Stack Website repository! This project was developed during an internship at SmileLine by Me and Shreeyash Garde. This full-stack website encompasses an array of functionalities and features a robust tech stack.
 
 ## Overview 🚀
 
@@ -29,10 +29,10 @@ The SmileLine website is a comprehensive platform designed to provide users with
 
 To explore or contribute to this project, follow these steps:
 
-1. Clone the repository: `git clone [repository_url]`
+1. Clone the repository: `git clone https://github.com/Pranavnk15/Dr`
 2. Navigate to the project directory.
 3. Install dependencies: `npm install`
-4. Run the project locally: `npm start`
+4. Run the project locally: `nodemon app.js`
 
 ## Contribution Guidelines 🤝
 
