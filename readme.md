@@ -1,4 +1,4 @@
-Here's an updated README file for your project, sprinkled with emojis:
+Here's an updated README file for our project, sprinkled with emojis:
 
 ---
 
