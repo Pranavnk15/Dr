@@ -225,6 +225,10 @@ app.get("/aboutus", function(req, res){
     res.render("about");
 });
 
+app.get("/faculty", function(req, res){
+    res.render("faculty");
+});
+
 
 // Assuming 'post' contains the data you're sending to the post.ejs file
 app.get('/posts/:postId', async function(req, res) {
