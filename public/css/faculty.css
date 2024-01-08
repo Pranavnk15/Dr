@@ -89,3 +89,24 @@ position: absolute;
   margin-left: 800px;
   margin-right: 200px;
 }
+@media (max-width: 768px) {
+  .intro2,
+  .intro3,
+  .intro4 {
+    margin-left: 10px; /* Adjust margins for smaller screens */
+    margin-right: 10px;
+  }
+
+  .intro3,
+  .intro4 {
+    margin-bottom: 20px; /* Add bottom margin */
+  }
+
+  .doctor4 {
+    position: static; /* Remove absolute positioning */
+    width: 100%; /* Set image width to full */
+    max-width: 100%; /* Set maximum width */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 0; /* Remove left margin */
+  }
+}
