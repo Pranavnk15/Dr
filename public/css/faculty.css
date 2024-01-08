@@ -101,7 +101,9 @@ position: absolute;
   .intro4 {
     margin-bottom: 20px; /* Add bottom margin */
   }
-
+.head1{
+  margin-left:0px;
+}
   .doctor4 {
     position: static; /* Remove absolute positioning */
     width: 100%; /* Set image width to full */
