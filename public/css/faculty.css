@@ -90,3 +90,41 @@ position: absolute;
   margin-right: 200px;
   margin-bottom: 300px;
 }
+
+@media (max-width: 768px) {
+  .intro2,
+  .intro3,
+  .intro4,
+  .intro5,
+  .intro6,
+  .intro7,
+  .intro8,
+  .intro9,
+  .intro10{
+    margin-left: 10px; /* Adjust margins for smaller screens */
+    margin-right: 10px;
+  }
+
+  
+.head1{
+  margin-left:0px;
+}
+  .doctor4,
+  .doctor5,
+  .doctor6,
+  .doctor7{
+    position: static; /* Remove absolute positioning */
+    width: 100%; /* Set image width to full */
+    max-width: 100%; /* Set maximum width */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 0; /* Remove left margin */
+  }
+.intro3,
+  .intro4 {
+    margin-bottom: 10px; /* Add bottom margin */
+  }
+.intro4{
+margin-top:0px;
+}
+}
+
