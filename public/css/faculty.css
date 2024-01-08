@@ -117,4 +117,8 @@ position: absolute;
     height: auto; /* Maintain aspect ratio */
     margin-left: 0; /* Remove left margin */
   }
+
+.intro4{
+margin-top:0px;
+}
 }
