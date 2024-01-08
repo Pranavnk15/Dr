@@ -121,7 +121,9 @@ position: absolute;
     height: auto; /* Maintain aspect ratio */
     margin-left: 0; /* Remove left margin */
   }
-
+.doctor5{
+margin-top: 100px;
+}
 .intro4{
 margin-top:0px;
 }
