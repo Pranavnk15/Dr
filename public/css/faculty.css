@@ -92,7 +92,13 @@ position: absolute;
 @media (max-width: 768px) {
   .intro2,
   .intro3,
-  .intro4 {
+  .intro4,
+  .intro5,
+  .intro6,
+  .intro7,
+  .intro8,
+  .intro9,
+  .intro10{
     margin-left: 10px; /* Adjust margins for smaller screens */
     margin-right: 10px;
   }
