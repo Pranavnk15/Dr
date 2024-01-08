@@ -121,10 +121,7 @@ position: absolute;
     height: auto; /* Maintain aspect ratio */
     margin-left: 0; /* Remove left margin */
   }
-.intro3,
-  .intro4 {
-    margin-bottom: 10px; /* Add bottom margin */
-  }
+
 .intro4{
 margin-top:0px;
 }
