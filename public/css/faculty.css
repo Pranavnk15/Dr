@@ -110,7 +110,10 @@ position: absolute;
 .head1{
   margin-left:0px;
 }
-  .doctor4 {
+  .doctor4,
+  doctor5,
+  doctor6,
+  doctor7{
     position: static; /* Remove absolute positioning */
     width: 100%; /* Set image width to full */
     max-width: 100%; /* Set maximum width */
