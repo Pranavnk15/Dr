@@ -18,12 +18,12 @@ app.set('views', './views');
 
 // Set up session middleware
 app.use(session({
-    secret: 'mySecret', // Change this to a secure value in production
+    secret: 'mySecret', 
     resave: false,
     saveUninitialized: false,
     cookie: {
-      secure: false, // Set to true in production if using HTTPS
-      maxAge: 24 * 60 * 60 * 1000 // Session max age in milliseconds (e.g., 1 day)
+      secure: false, 
+      maxAge: 24 * 60 * 60 * 1000 
     }
 }));
   
@@ -50,7 +50,7 @@ const userSchema = new mongoose.Schema({
 const postSchema = {
     title: String,
     content: String,
-    imagePath: String // Add imagePath field for storing image paths
+    imagePath: String 
 };
 const User = mongoose.model('User', userSchema);
 const Post = mongoose.model("Post", postSchema);
@@ -59,7 +59,8 @@ const Post = mongoose.model("Post", postSchema);
 // Serve HTML for the form
 app.get('/', (req, res) => {
     res.render('index');
-});// Handle form submission
+});
+// Handle form submission
 app.post('/submit', async (req, res) => {
     const { name, email, phone, comments } = req.body;
 
@@ -75,7 +76,7 @@ app.post('/submit', async (req, res) => {
         // Save user to the database
         await newUser.save();
         console.log('User saved to MongoDB');
-        // Send an alert script for successful submission
+        // Send an alert for successful submission
         res.send(`
             <script>
                 alert('Form submitted successfully!');
@@ -84,7 +85,7 @@ app.post('/submit', async (req, res) => {
         `);
     } catch (err) {
         console.error('Error saving user to MongoDB: ' + err.message);
-        // Send an alert script for form submission error
+        // Send an alert for form submission error
         res.status(500).send(`
             <script>
                 alert('Error submitting form');
@@ -100,7 +101,7 @@ app.get('/admin', (req, res) => {
     if (req.session.authenticated) {
         User.find({}).sort({ _id: -1 }).exec()
         .then(users => {
-            res.render('admin', { users: users }); // Assuming 'admin.ejs' is your EJS file for the admin view
+            res.render('admin', { users: users }); 
         })
         .catch(err => {
             console.error('Error fetching users from MongoDB: ' + err.message);
@@ -135,6 +136,7 @@ app.post('/delete', async (req, res) => {
         res.status(500).send('Error deleting users');
     }
 });
+
 app.get("/blog", async function(req, res) {
     try {
         const posts = await Post.find({}).exec();
@@ -230,7 +232,7 @@ app.get("/faculty", function(req, res){
 });
 
 
-// Assuming 'post' contains the data you're sending to the post.ejs file
+
 app.get('/posts/:postId', async function(req, res) {
     try {
         const requestedPostId = req.params.postId;
@@ -243,7 +245,7 @@ app.get('/posts/:postId', async function(req, res) {
             res.render("post", {
                 title: post.title,
                 content: post.content,
-                imagePath: post.imagePath // Make sure imagePath is retrieved from the database
+                imagePath: post.imagePath 
             });
         }
     } catch (err) {
@@ -252,26 +254,22 @@ app.get('/posts/:postId', async function(req, res) {
     }
 });
 
-// Sample route for handling login form submission
+
 app.post('/login', (req, res) => {
     const { email, password } = req.body;
-    // Here, you can perform authentication logic, like checking against a database
-    // For demonstration purposes, a simple check is shown
   
     if (email === 'admin@gmail.com' && password === '1234') {
-      // Set user session (create a basic authenticated session)
       req.session.authenticated = true;
       req.session.user = { email: email }; // Store user details in the session
       res.redirect('/admin'); // Redirect to admin or authenticated page
     } else {
-      res.send('Invalid credentials. Please try again.'); // For demonstration purposes, send an error message
+      res.send('Invalid credentials. Please try again.'); 
     }
   });
   
 
-// Sample route for displaying the login form
 app.get('/login', (req, res) => {
-    res.render('login'); // Render the login.ejs file
+    res.render('login'); 
   });
   
   
