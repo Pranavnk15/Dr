@@ -12,9 +12,10 @@ const app = express();
 const homeStartingContent = "Welcome to Dr. Pradeep Makasare's dental blog, a space dedicated to enhancing your oral health and bringing you the latest insights in modern dentistry. Our team is passionate about not just creating beautiful smiles, but also ensuring the overall wellness of our patients. From tips for maintaining optimal oral hygiene to demystifying common dental procedures, we're here to empower you with knowledge and guidance on your journey to a healthier, happier smile.";
 
 // EJS setup
+const path = require('path');
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-app.use(express.static("public"));
-app.set('views', './views');
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Set up session middleware
 app.use(session({
